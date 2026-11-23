@@ -1,0 +1,55 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== RESET =====
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ===== ANIMACIONES =====
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY($espacio-medio);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ===== GENERAL =====
+.pagina {
+    background-color: $color-secundario;
+    color: $color-texto;
+    font-family: $fuente-texto;
+}
+
+.contenido {
+    @include columna(30px);
+    padding: $espacio-medio;
+
+    @include tablet {
+        padding: $espacio-medio * 1.5;
+    }
+
+    @include escritorio {
+        padding: $espacio-grande;
+    }
+}
+
+.seccion {
+    @include columna(15px);
+}
+
+.lista {
+    padding-left: $espacio-medio;
+}
+
+.foto {
+    width: 100%;
+    @include aparecer(1s, 0.3s);
+}

@@ -1,0 +1,52 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== BASE COMUN DE TITULOS =====
+%titulo-base {
+    margin: 0;
+    color: $color-primario;
+    font-weight: $peso-negrita;
+}
+
+// ===== TITULOS =====
+.titulo {
+    @extend %titulo-base;
+    font-family: $fuente-titulos;
+    font-size: 34px;
+    @include aparecer;
+
+    @include tablet {
+        font-size: 38px;
+    }
+
+    @include escritorio {
+        font-size: 42px;
+    }
+}
+
+.titulo-seccion {
+    @extend %titulo-base;
+    font-family: $fuente-titulos;
+    font-size: 26px;
+
+    @include tablet {
+        font-size: 28px;
+    }
+
+    @include escritorio {
+        font-size: 30px;
+    }
+}
+
+.subtitulo {
+    @extend %titulo-base;
+    font-family: $fuente-texto;
+    font-size: $texto-base + 4px;
+}
+
+// ===== TEXTOS =====
+.texto {
+    margin: 0;
+    font-size: $texto-base;
+    font-weight: $peso-normal;
+}
