@@ -1,0 +1,18 @@
+// ===== ARCHIVO PRINCIPAL =====
+// Unico punto de entrada: compila a styles/style.css
+
+// Base
+@use "base/base";
+@use "base/tipografia";
+
+// Layout
+@use "layout/header";
+@use "layout/nav";
+@use "layout/grillas";
+@use "layout/footer";
+
+// Componentes
+@use "components/cards";
+@use "components/buttons";
+@use "components/carousel";
+@use "components/modal";
