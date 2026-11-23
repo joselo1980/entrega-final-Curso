@@ -1,0 +1,30 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== TARJETAS =====
+.tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $espacio-medio;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include escritorio {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.tarjeta {
+    @include columna($espacio-chico);
+    padding: $espacio-medio;
+    background-color: $color-blanco;
+    border-bottom: 4px solid transparent;
+    transition: transform $transicion, border-color $transicion;
+
+    &:hover {
+        transform: translateY(-5px);
+        border-bottom-color: $color-acento;
+    }
+}

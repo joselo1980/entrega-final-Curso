@@ -1,0 +1,7 @@
+@use "../utilities/variables" as *;
+
+// ===== MODAL DE BOOTSTRAP =====
+.ventana {
+    background-color: $color-secundario;
+    border-top: 5px solid $color-acento;
+}

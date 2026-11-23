@@ -1,0 +1,27 @@
+@use "../utilities/variables" as *;
+
+// ===== BOTONES =====
+.boton {
+    align-self: flex-start;
+    padding: $espacio-chico $espacio-medio;
+    border: 2px solid $color-primario;
+    background-color: $color-primario;
+    color: $color-blanco;
+    font-weight: $peso-negrita;
+    transition: background-color $transicion, color $transicion;
+
+    &:hover {
+        background-color: $color-acento-claro;
+        border-color: $color-acento-claro;
+        color: $color-primario;
+    }
+
+    &:focus {
+        outline: 3px solid $color-acento;
+    }
+
+    &:active {
+        background-color: $color-secundario;
+        color: $color-primario;
+    }
+}
