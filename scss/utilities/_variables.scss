@@ -1,0 +1,26 @@
+// ===== COLORES =====
+$color-primario: #2c3e5c;
+$color-secundario: #f5f1ea;
+$color-acento: #b8955a;
+$color-acento-claro: #d9bc8c; // dorado claro para texto sobre fondo azul (contraste)
+$color-texto: #333333;
+$color-blanco: #ffffff;
+
+// ===== TIPOGRAFIAS =====
+$fuente-titulos: 'Playfair Display', serif;
+$fuente-texto: 'Lato', sans-serif;
+$peso-normal: 400;
+$peso-negrita: 700;
+$texto-base: 16px;
+
+// ===== ESPACIOS =====
+$espacio-chico: 10px;
+$espacio-medio: $espacio-chico * 2;
+$espacio-grande: $espacio-medio * 2;
+
+// ===== TRANSICIONES =====
+$transicion: 0.3s;
+
+// ===== BREAKPOINTS =====
+$tablet: 768px;
+$escritorio: 1024px;

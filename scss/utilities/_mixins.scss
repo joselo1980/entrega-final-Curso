@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+// Media query de tablet (mobile-first)
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+// Media query de escritorio (mobile-first)
+@mixin escritorio {
+    @media (min-width: $escritorio) {
+        @content;
+    }
+}
+
+// Contenedor flex en columna
+@mixin columna($espacio) {
+    display: flex;
+    flex-direction: column;
+    gap: $espacio;
+}
+
+// Animacion de entrada con duracion y demora
+@mixin aparecer($duracion: 0.8s, $demora: 0s) {
+    animation: aparecer $duracion ease-out $demora both;
+}
