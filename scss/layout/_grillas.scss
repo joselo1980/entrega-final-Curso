@@ -1,0 +1,107 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ===== GRILLA INICIO =====
+.grilla-inicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "presentacion"
+        "quienes"
+        "servicios"
+        "galeria"
+        "elegir";
+    gap: 30px;
+
+    @include escritorio {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "presentacion quienes"
+            "presentacion servicios"
+            "galeria galeria"
+            "elegir elegir";
+        gap: $espacio-grande;
+    }
+}
+
+.presentacion {
+    grid-area: presentacion;
+}
+
+.quienes {
+    grid-area: quienes;
+}
+
+.servicios {
+    grid-area: servicios;
+}
+
+.elegir {
+    grid-area: elegir;
+}
+
+.galeria {
+    grid-area: galeria;
+}
+
+// ===== GRILLA SERVICIOS =====
+.grilla-servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "introduccion"
+        "areas";
+    gap: 30px;
+
+    @include escritorio {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "introduccion areas";
+        gap: $espacio-grande;
+    }
+}
+
+.introduccion {
+    grid-area: introduccion;
+}
+
+.areas {
+    grid-area: areas;
+}
+
+// ===== GRILLA NOSOTROS =====
+.grilla-nosotros {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nosotros"
+        "mision"
+        "vision"
+        "equipo";
+    gap: 30px;
+
+    @include escritorio {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nosotros mision"
+            "nosotros vision"
+            "equipo equipo";
+        gap: $espacio-grande;
+    }
+}
+
+.nosotros {
+    grid-area: nosotros;
+}
+
+.mision {
+    grid-area: mision;
+}
+
+.vision {
+    grid-area: vision;
+}
+
+.equipo {
+    grid-area: equipo;
+}
